@@ -17,6 +17,8 @@ from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUiType
 from jarvisUi import Ui_MainWindow
 
+
+
 Assistant = pyttsx3.init('sapi5')
 voices = Assistant.getProperty('voices')
 Assistant.setProperty('voices',voices[0].id)
@@ -60,7 +62,7 @@ class MainThread(QThread):
             if "hello" in self.query:
                 speak("Hello Sir, I Am jarvish")
                 speak("Your Personal Ai Assistant !")
-                speak("How may i help you? ")
+                speak("How may i help you sir? ")
 
             elif "how are you" in self.query:
                 speak("i am fine sir !")
